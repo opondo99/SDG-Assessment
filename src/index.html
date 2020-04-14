@@ -12,8 +12,20 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <div>Hello</div>
+        <form>
+            Population:<input type="number" class="data-population">
+            Time to Elapse:<input type="number" class="data-time-to-elapse">
+            Reported Cases:<input type="number" class="data-reported-cases">
+            Total Hospital Beds<input type="number" class="data-total-hospital-beds">
+            Period<input type="number" class="data-period-type">
+            <button type="submit" class="data-go-estimate">Estimate</button>
+        </form>  
         
-        <script src="/src/estimator.js" async defer></script>
+        <div class="results">
+            <ul class="results-items">
+
+            </ul>
+        </div>
+        <script src="/src/estimator.js" type="module" async defer></script>
     </body>
 </html>
