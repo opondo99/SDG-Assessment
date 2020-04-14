@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+    header {
+        width: 100vw;
+        min-height: 10vh;
+        text-align: center;
+        font-size: 5vmin;
+        text-transform: uppercase;
+        letter-spacing: 2.3vmin;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+        background: #fff;
+    }
+
+    // header::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 90vw;
+    //     margin: auto;
+    //     height: 1px;
+    //     background: black;
+    //     top: 35%;
+    //     left: 0;
+    //     transform: translate(5%, 50%);
+    //     z-index: -1;
+    // }
+
+    main {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        form{
+        border-top: 5vmin solid rgb(30, 175, 30);
+        border-right: .5px solid rgb(167, 159, 159);
+        border-left: 1px solid rgb(168, 162, 162);
+        min-width: 25vw;
+        margin: 0 auto;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+            input {
+                min-height: 5vh;
+                margin-bottom: 1.5rem;
+            }
+
+            button {
+                padding: .5rem;
+                margin: .5rem;
+                border: none;
+                outline: none;
+                min-width: 20vmin;
+                background: rgb(30, 175, 30);
+                text-transform: uppercase;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+        }
+
+        .results {
+            min-width: 30vw;
+            box-shadow: 1px 1px 1px 1px rgb(168, 162, 162);
+            padding: 1rem;
+            border-radius: 15px;
+            line-height: 5vmin;
+        }
+    }
+}

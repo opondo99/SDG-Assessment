@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+body header {
+  width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  font-size: 5vmin;
+  text-transform: uppercase;
+  letter-spacing: 2.3vmin;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+body main {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main form {
+  border-top: 5vmin solid #1eaf1e;
+  border-right: 0.5px solid #a79f9f;
+  border-left: 1px solid #a8a2a2;
+  min-width: 25vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main form input {
+  min-height: 5vh;
+  margin-bottom: 1.5rem;
+}
+
+body main form button {
+  padding: .5rem;
+  margin: .5rem;
+  border: none;
+  outline: none;
+  min-width: 20vmin;
+  background: #1eaf1e;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+body main .results {
+  min-width: 30vw;
+  -webkit-box-shadow: 1px 1px 1px 1px #a8a2a2;
+          box-shadow: 1px 1px 1px 1px #a8a2a2;
+  padding: 1rem;
+  border-radius: 15px;
+  line-height: 5vmin;
+}
+/*# sourceMappingURL=main.css.map */

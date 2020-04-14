@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SDG Assessment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./main.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>Covid19 Impact EStimator</header>
+        <main>
+            <form>
+                <div class="input-field col s6">
+                    <input type="number" id="population" class="data-population">
+                    <label for="population">Population</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="time" class="data-time-to-elapse">
+                    <label for="time">Time to Elapse</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="reported-cases" class="data-reported-cases">
+                    <label for="reported-cases">Reported Cases</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="hospital-beds" class="data-total-hospital-beds">
+                    <label for="hospital-beds">Total Hospital Beds</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="period" class="data-period-type">
+                    <label for="period">Period</label>
+                </div>
+
+                <button type="submit" class="data-go-estimate">Estimate</button>
+            </form>  
+            
+            <div class="results">
+                <ul class="results-items">
+
+                </ul>
+            </div>
+        </main>
+        <script src="/src/estimator.js" type="module" async defer></script>
+    </body>
+</html>
