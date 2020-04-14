@@ -1,20 +1,3 @@
-// DUMMY DATA
-// var inputData = [
-//     {
-//         region: {
-//             name : "Africa",
-//             avgAge: 19.7,
-//             avgDailyIncomeInUSD: 5,
-//             avgDailyIncomePopulation: 0.71
-//         },
-//         periodType: "days",
-//         timeToElapse: 58,
-//         reportedCases: 674,
-//         population: 6662705,
-//         totalHospitalBeds: 1380614
-//     }
-// ];
-
 // INPUT
 const reportedCases = document.querySelector(".data-reported-cases");
 const population = document.querySelector(".data-population")
@@ -37,37 +20,35 @@ function goEstimate(e) {
     e.preventDefault()
 
     const currentlyInfected = document.createElement('li');
-    currentlyInfected.innerText = reportedCases.value * 10  + ' people'  ;
+    currentlyInfected.innerText = reportedCases.value * 10  + '         People'  ;
     currentlyInfected.classList.add("results-item");
     estimate.appendChild(currentlyInfected);
 
 
     const infectionsByRequtedTime = document.createElement('li');
-    infectionsByRequtedTime.innerText = parseInt(currentlyInfected.innerText * 512 / 28) + ' people infected today';
+    infectionsByRequtedTime.innerText = Math.floor(parseInt(currentlyInfected.innerText) * 512 / 28) + '            People infected today';
     infectionsByRequtedTime.classList.add("results-item");
     estimate.appendChild(infectionsByRequtedTime);
 
 
     const casesForICUByRequestedTime = document.createElement('li');
-    casesForICUByRequestedTime.innerText = infectionsByRequtedTime.innerText * 5 / 100 + ' cases for ICU';
+    casesForICUByRequestedTime.innerText = Math.floor(parseInt(infectionsByRequtedTime.innerText) * 5 / 100) + '            Cases for ICU';
     casesForICUByRequestedTime.classList.add("results-item");
     estimate.appendChild(casesForICUByRequestedTime);
 
     const severeCasesByRequestedTime = document.createElement('li');
-    severeCasesByRequestedTime.innerText = infectionsByRequtedTime.innerText * 15 / 100 + ' severe cases';
+    severeCasesByRequestedTime.innerText = Math.floor(parseInt(infectionsByRequtedTime.innerText) * 15 / 100) + '           Severe cases';
     severeCasesByRequestedTime.classList.add("results-item");
     estimate.appendChild(severeCasesByRequestedTime);
 
 
     const hospitalBedsByRequestedTime = document.createElement('li');
-    hospitalBedsByRequestedTime.innerText = severeCasesByRequestedTime.innerText - (totalHospitalBeds.value * 35 / 100) + 'hospital beds available';
+    hospitalBedsByRequestedTime.innerText = Math.floor(parseInt(severeCasesByRequestedTime.innerText) - (totalHospitalBeds.value * 35 / 100)) + '           Hospital beds available';
     hospitalBedsByRequestedTime.classList.add("results-item");
-
     estimate.appendChild(hospitalBedsByRequestedTime);
 };
 
 const covid19ImpactEstimator = (data) => {
-    // e.preventDefault()
 
     var output = {}
 
@@ -86,7 +67,6 @@ const covid19ImpactEstimator = (data) => {
     }
 
 
-    // var input = data;
     var data;
     var impact = {};
     var severeImpact = {};
@@ -120,9 +100,6 @@ const covid19ImpactEstimator = (data) => {
     impact["dollarsInFlight"] = dollarsInFlight;
     severeImpact["dollarsInFlight"] = dollarsInFlight;
 
-    // output.push(data);
-    // output.push(impact);
-    // output.push(severeImpact);
     output["data"] = data;
     output["impact"] = impact;
     output["severeImpact"] = severeImpact;

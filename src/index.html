@@ -9,23 +9,48 @@
         <title>SDG Assessment</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./main.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form>
-            Population:<input type="number" class="data-population">
-            Time to Elapse:<input type="number" class="data-time-to-elapse">
-            Reported Cases:<input type="number" class="data-reported-cases">
-            Total Hospital Beds<input type="number" class="data-total-hospital-beds">
-            Period<input type="number" class="data-period-type">
-            <button type="submit" class="data-go-estimate">Estimate</button>
-        </form>  
-        
-        <div class="results">
-            <ul class="results-items">
+        <header>Covid19 Impact EStimator</header>
+        <main>
+            <form>
+                <div class="input-field col s6">
+                    <input type="number" id="population" class="data-population">
+                    <label for="population">Population</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="time" class="data-time-to-elapse">
+                    <label for="time">Time to Elapse</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="reported-cases" class="data-reported-cases">
+                    <label for="reported-cases">Reported Cases</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="hospital-beds" class="data-total-hospital-beds">
+                    <label for="hospital-beds">Total Hospital Beds</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="number" id="period" class="data-period-type">
+                    <label for="period">Period</label>
+                </div>
 
-            </ul>
-        </div>
+                <button type="submit" class="data-go-estimate">Estimate</button>
+            </form>  
+            
+            <div class="results">
+                <ul class="results-items">
+
+                </ul>
+            </div>
+        </main>
         <script src="/src/estimator.js" type="module" async defer></script>
     </body>
 </html>
